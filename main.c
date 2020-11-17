@@ -32,6 +32,7 @@ int main() {
     printf("\trandom %d: %d\n", i, arr[i]);
   }
   printf("\n");
+  close (randomin);
 
   printf("Writing numbers to file...\n\n");
   int k = write(randomout, &arr, sizeof(arr));
@@ -57,6 +58,8 @@ int main() {
   for (i = 0; i < 10; i++) {
     printf("\trandom %d: %d\n", i, arr2[i]);
   }
+
+  close(randomin2);
 
   return 0;
 }
